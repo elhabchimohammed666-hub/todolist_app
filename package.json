@@ -1,0 +1,23 @@
+{
+  "name": "taskflow-mern-app",
+  "version": "1.0.0",
+  "description": "Application To-Do List Full-Stack MERN moderne, robuste et prête pour la production",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend"
+  },
+  "keywords": [
+    "mern",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs",
+    "tailwind",
+    "tanstack-query"
+  ],
+  "author": "Senior MERN Architect",
+  "license": "ISC"
+}
