@@ -8,41 +8,6 @@ Application de gestion de tâches (To-Do List) moderne, robuste, hautement perfo
 
 Le projet est structuré selon une architecture monorepo propre et découplée :
 
-```text
-todolist/
-├── backend/                  # Serveur API RESTful (Node.js & Express.js)
-│   ├── src/
-│   │   ├── config/           # Connexion DB (MongoDB / Mongoose)
-│   │   ├── controllers/      # Logique métier et gestion des requêtes
-│   │   ├── middleware/       # Sécurité, validation, auth, gestion centralisée des erreurs
-│   │   ├── models/           # Schémas stricts Mongoose (Task, User) avec indexation
-│   │   ├── routes/           # Définition des endpoints RESTful
-│   │   ├── validators/       # Règles de validation express-validator
-│   │   ├── app.js            # Configuration d'Express et middlewares
-│   │   └── server.js         # Point d'entrée avec Graceful Shutdown
-│   ├── .env.example          # Gabarit des variables d'environnement
-│   └── package.json
-│
-├── frontend/                 # Client SPA (React 19, Vite, Tailwind CSS v4)
-│   ├── src/
-│   │   ├── api/              # Instance Axios avec intercepteurs & services
-│   │   ├── components/
-│   │   │   ├── common/       # Navbar, EmptyState, SkeletonCard
-│   │   │   └── tasks/        # TaskCard, TaskList, TaskFormModal, TaskFilterBar, TaskStats
-│   │   ├── context/          # Context API pour le mode Sombre/Clair
-│   │   ├── hooks/            # TanStack React Query hooks & useDebounce
-│   │   ├── utils/            # Utilitaire cn (clsx + tailwind-merge)
-│   │   ├── App.jsx           # Composant racine avec QueryClient & Dashboard
-│   │   ├── main.jsx          # Point d'entrée React
-│   │   └── index.css         # Styles globaux & Tailwind v4
-│   ├── .env.example
-│   └── package.json
-│
-├── package.json              # Scripts d'orchestration globaux
-└── README.md                 # Documentation complète du projet
-```
-
----
 
 ## ⚡ Caractéristiques & Bonnes Pratiques Implémentées
 
@@ -108,15 +73,15 @@ Un fichier `.env` prêt à l'emploi a été configuré dans `backend/.env` :
 ```env
 PORT=5000
 NODE_ENV=development
-MONGODB_URI=mongodb://127.0.0.1:27017/todolist
-CLIENT_URL=http://localhost:5173
-JWT_SECRET=super_secret_jwt_key_production_change_me_12345
-JWT_EXPIRES_IN=7d
+MONGODB_URI=url
+CLIENT_URL=url
+JWT_SECRET=secret
+JWT_EXPIRES_IN=secret
 ```
 
 #### Frontend (`frontend/.env`)
 ```env
-VITE_API_BASE_URL=http://localhost:5000/api
+VITE_API_BASE_URL=url
 ```
 
 ---
@@ -130,7 +95,7 @@ Dans deux terminaux distincts :
 ```bash
 npm run dev:backend
 ```
-> Le serveur démarre sur **http://localhost:5000**
+
 
 **Terminal 2 (Frontend) :**
 ```bash
