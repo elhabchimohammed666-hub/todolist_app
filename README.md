@@ -1,3 +1,6 @@
+## License
+   © 2026 Elhabchi Mohammed. All Rights Reserved.
+
 # 🚀 TaskFlow Pro — Application To-Do List Full-Stack MERN
 
 Application de gestion de tâches (To-Do List) moderne, robuste, hautement performante et prête pour la production, développée avec la stack **MERN** (MongoDB, Express.js, React 19, Node.js).
